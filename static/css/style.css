@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body{
+    max-width:100%;
+    overflow-x:hidden;
+
+}
+
+.cust-top-bar {
+  background: url("../image/theme/background.jpg"),
+    linear-gradient(
+      to right,
+      rgba(0, 10, 20, 0.7),
+      rgba(0, 10, 20, 0.5),
+      rgba(0, 10, 20, 0.5),
+      rgba(0, 10, 20, 0.7)
+    );
+  background-blend-mode: multiply;
+  background-size: cover;
+  align-items: center;
+}
+
+.nav-link > svg {
+  margin-right: 0.6rem;
+}
+
+.nav-link {
+  font-weight: bolder;
+}
+
+.banner {
+  width: 100%;
+  height: 40rem;
+}
+
+.cust-ban-ul {
+  list-style-type: none;
+}
+
+.cust-ban-ul > li > a {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.cust-ban-ul > li > a > svg {
+  margin-right: 0.5rem;
+}
+
+.cust-ban-ul > li > a:hover {
+  color: gold;
+}
+
+.cust-ban-ul > li {
+  margin-right: 1rem;
+}
+
+.cust-ban-name {
+  color: white;
+  margin-top: 6rem;
+}
+
+.cust-ban-name > p {
+  margin: 0;
+  padding: 0;
+}
+
+.wel {
+  font-size: 2.5rem;
+}
+
+.main-name {
+  font-size: 10rem;
+  font-weight: bolder;
+}
+
+.left {
+  position: absolute;
+  top: 20rem;
+  left: 0;
+}
+
+.right {
+  position: absolute;
+  top: 20rem;
+  right: 0;
+}
+
+.cust-img {
+  width: 35rem;
+  height: 20rem;
+}
+
+.cust-right {
+  width: 40rem;
+  height: 30rem;
+  background: url("https://previews.123rf.com/images/vepar5/vepar51204/vepar5120400371/12981656-outline-india-map-with-transparent-background-of-capsules-symbolizing-pharmacy-and-medicine.jpg"),
+    /* background: url("https://storage.googleapis.com/picxystatic/cache/2018/12/4/f4849146817ed5474e28b45147476789.jpg"), */
+      linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.cust-link:hover {
+  color: gold;
+}
+
+.footer {
+  margin-top: 2rem;
+  width: 100%;
+  height: 40rem;
+  background: url("../image/theme/background.jpg"),
+    linear-gradient(
+      to right,
+      rgba(0, 10, 20, 0.7),
+      rgba(0, 10, 20, 0.5),
+      rgba(0, 10, 20, 0.5),
+      rgba(0, 10, 20, 0.7)
+    );
+  background-blend-mode: multiply;
+  background-size: cover;
+  align-items: center;
+}
+
+.cust-ban2-head {
+  top: 15rem;
+  left: 5rem;
+  width: auto;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.cust-ban2-head > p {
+  margin-top: 1rem;
+}
+
+.cust-ban2-head > ul {
+  list-style-type: none;
+  display: flex;
+  padding-top: 1.5rem;
+}
+
+.cust-ban2-head > ul > li {
+  margin: 0.5rem;
+}
+
+.cust-ban2-head > ul > li > a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: white;
+}
+.cust-ban2-head > ul > li > a:hover {
+  color: gold;
+}
+
+.fadeIn {
+  animation-name: fadein;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.fadeInFast {
+  animation: fadein 1s 3s infinite forwards;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation-name: zoomin;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes zoomin {
+  0% {
+    transform: scale(0.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cust-img-shado-round {
+  width: 20rem;
+  height: 20rem;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.8),
+    0 6px 20px 0 rgba(255, 255, 255, 0.9);
+  border-radius: 3rem;
+  transition: all 300ms ease;
+}
+
+.gallary {
+  border: 10px solid white;
+  padding: 0;
+}
+
+.hotel-img {
+  height: 15rem;
+  width: 15rem;
+  border: 3px solid white;
+  padding: 5px;
+  border-radius: 20rem;
+}
+
+.dest-bg {
+  background: rgba(15, 15, 15)
+    linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.6));
+  background-blend-mode: multiply;
+}
+
+.cust-contact-all-page {
+  position: absolute;
+  position: -webkit-sticky;
+  position: fixed;
+  right: 10px;
+  top: 15rem;
+  z-index: 1;
+}
+.sticky-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:1;
+}
+
+#navbartop>li>a:hover{
+    color:orange;
+    font-size:1.3rem;
+}

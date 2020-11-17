@@ -1,0 +1,68 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<div id="carouselExampleSlidesOnly position-relative" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://static.wixstatic.com/media/e63cf6_1d19d9b1b52d44f4852d4a6c3a849210~mv2.jpg/v1/fill/w_616,h_353,al_c/e63cf6_1d19d9b1b52d44f4852d4a6c3a849210~mv2.jpg"
+                class="d-block w-100" alt="..." style="height: 30rem;">
+        </div>
+    </div>
+    <div class="position-absolute cust-ban2-head responsive-hide">
+        {% include  './components/navlist.html' %}
+        <p class="text-warning mx-5 px-4" style="font-size: 3rem;">{{ "guest reviwes" | upper }}</p>
+    </div>
+    <div class="position-absolute cust-ban2-head responsive-display">
+        <p class="text-warning fadeIn" style="font-size: 3rem;">{{ "guest" | upper }}</p>
+    </div>
+    <div class="position-absolute" style="top:0;">
+        {% include "./components/responsive-sidebar.html" %}
+    </div>
+</div>
+
+{% if msg == "Success" %}
+<div class="alert alert-success" role="alert">
+    Saved!!
+</div>
+{% elif  msg == "Failed" %}
+<div class="alert alert-danger" role="alert">
+    {{mag}}
+</div>
+{% endif %}
+
+
+
+<div class="container bg-dark text-white p-5 mt-3">
+    <h1 class="text-warning">{{"reviwe"|upper}}</h1>
+    <div class="border border-info"></div>
+    <div class="row">
+        <div class="col-12">
+            <form class="mt-5" method="POST">
+                {% csrf_token %}
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                    </div>
+                    <input type="text" class="form-control" name="name" placeholder="Full name" aria-label="Username"
+                        aria-describedby="basic-addon1" required>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" name="email" placeholder="example@domain.com"
+                        aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">Email</span>
+                    </div>
+                </div>
+                <div class="input-group" style="height: 15rem;">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text responsive-hide">Your Opinion</span>
+                    </div>
+                    <textarea class="form-control" name="description" aria-label="With textarea" required></textarea>
+                </div>
+                <input class="btn btn-primary mt-4" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

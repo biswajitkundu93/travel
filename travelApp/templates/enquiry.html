@@ -1,0 +1,153 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<div id="carouselExampleSlidesOnly position-relative" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://acregroup.in/image/bannerenquiry.jpg" class="d-block w-100" alt="..."
+                style="height: 30rem;">
+        </div>
+    </div>
+    <div class="position-absolute cust-ban2-head responsive-hide">
+        {% include  './components/navlist.html' %}
+        <p class="text-warning mx-5 px-4" style="font-size: 3rem;">{{ "quick enquiry" | upper }}</p>
+    </div>
+    <div class="position-absolute cust-ban2-head responsive-display">
+        <p class="text-warning fadeIn" style="font-size: 3rem;">{{ "enquiry" | upper }}</p>
+    </div>
+    <div class="position-absolute" style="top:0;">
+        {% include "./components/responsive-sidebar.html" %}
+    </div>
+</div>
+
+
+{% if msg == "Success" %}
+<div class="alert alert-success" role="alert">
+    Saved!!
+</div>
+{% elif  msg == "Failed" %}
+<div class="alert alert-danger" role="alert">
+    {{mag}}
+</div>
+{% endif %}
+
+
+<div class="container mt-3 p-5 text-white" style="background-color: rgba(0, 0, 0, 0.8);">
+    <form class="needs-validation" method="POST">
+        {% csrf_token %}
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom01">Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" name="name" placeholder="Name" id="validationCustom01" required>
+                <div class="invalid-feedback">
+                    Please provide a valid name.
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom02">Email <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" name="email" placeholder="example@domain.com"
+                    id="validationCustom02" required>
+                <div class="invalid-feedback">
+                    Please provide a valid Email.
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom01">Contect Number <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" name="contect" placeholder="Number" id="validationCustom01"
+                    required>
+                <div class="invalid-feedback">
+                    Please provide a valid Contect Number.
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom02">Country of Residence <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" name="country" placeholder="country" id="validationCustom02"
+                    required>
+                <div class="invalid-feedback">
+                    Please provide a valid Country.
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom01">Arrival Date <span class="text-danger">*</span></label>
+                <input type="date" class="form-control" name="arrivalDate" placeholder="Arrival Date"
+                    id="validationCustom01" required>
+                <div class="invalid-feedback">
+                    Please provide a valid Arrival Date.
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="validationCustom02">Departure Date <span class="text-danger">*</span></label>
+                <input type="date" class="form-control" name="departureDate" placeholder="Departure Date"
+                    id="validationCustom02" required>
+                <div class="invalid-feedback">
+                    Please provide a valid Departure Date.
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom03">Adult <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" name="adult" placeholder="No of Adult" id="validationCustom03"
+                    required>
+                <div class="invalid-feedback">
+                    Please provide a valid Number.
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom05">Child (5-12year) <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" name="child" placeholder="No of Child" id="validationCustom05"
+                    required>
+                <div class="invalid-feedback">
+                    Please provide a valid Number.
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationCustom04">Accommodation <span class="text-danger">*</span></label>
+                <select class="custom-select" name="accomodation" id="validationCustom04" required>
+                    <option selected disabled value="">Select Accommodation</option>
+                    <option>Luxury</option>
+                    <option>5 Star</option>
+                    <option>4 Star</option>
+                    <option>3 Star</option>
+                    <option>Budget</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please provide a valid accommodation.
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class=" col-md-12 mb-3">
+                <label for="validationTextarea">Remark</label>
+                <textarea class="form-control" name="remark" id="validationTextarea"></textarea>
+                <div class="invalid-feedback">
+                    Please enter a message in the Remark.
+                </div>
+            </div>
+
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+
+    <script>
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+</div>
+{% endblock content %}

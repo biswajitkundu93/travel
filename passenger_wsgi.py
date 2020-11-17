@@ -1,0 +1,1 @@
+from TravelingSite.wsgi import application

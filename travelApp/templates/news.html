@@ -1,0 +1,52 @@
+{% extends "layout/base.html" %}
+{% block content %}
+
+<div id="carouselExampleSlidesOnly position-relative" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="https://travelstrokes.com/wp-content/uploads/2019/07/49200025_282334775806697_6646929741347553280_n.jpg"
+                class="d-block w-100" alt="..." style="height: 30rem;">
+        </div>
+
+    </div>
+    <div class="position-absolute cust-ban2-head responsive-hide">
+        {% include  './components/navlist.html' %}
+        <p class="text-warning mx-5 px-4" style="font-size: 3rem;">{{ "News & announcement" |upper}}</p>
+    </div>
+
+    <div class="position-absolute cust-ban2-head responsive-display">
+        <p class="text-warning fadeIn" style="font-size: 3rem;">{{ "News" | upper }}</p>
+    </div>
+    <div class="position-absolute" style="top:0;">
+        {% include "./components/responsive-sidebar.html" %}
+    </div>
+</div>
+
+
+<div class="container mt-3 bg-dark">
+
+    <div class="row p-5 responsive-hide">
+        {% for item in news %}
+        <div class="card mr-3" style="width: 20rem;">
+            <img src={{ item.image.url }} class="card-img-top" style="width: 20rem; height: 15rem;" alt="...">
+            <div class="card-body">
+                <p class="card-text"><b>{{item.title}}</b></p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="row p-5 responsive-display">
+        {% for item in news %}
+        <div class="card mr-3 my-3" style="width: 15rem;">
+            <img src={{ item.image.url }} class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text"><b>{{item.title}}</b></p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock  %}

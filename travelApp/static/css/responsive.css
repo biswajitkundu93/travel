@@ -1,0 +1,131 @@
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position:absolute;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow: auto;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .sidenav a {
+        text-decoration: none;
+        font-size: 18px;
+        color: #f1f1f1;
+        display: block;
+        transition: 0.3s;
+    }
+
+
+    /*.sidenav ul{*/
+    /*    list-style-type: none;*/
+    /*}*/
+
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+@media only screen and(max-width:768px) {
+
+    .responsive-hide{
+        display: none;
+    }
+    .responsive-img-width{
+        width: 18rem;
+        margin: 0.5rem;
+    }
+    .footer{
+        height: auto;
+    }
+    .responsive-heading-font{
+        font-size: 1.2rem;
+    }
+    .responsive-margin{
+        margin: 1rem;
+    }
+    .responsive-width{
+        width: auto;
+    }
+    .responsive-width-fluid{
+        width: 20rem;
+    }
+    .responsive-grid{
+        margin: 0.8rem;
+        display: grid;
+        grid-template-columns: 40rem;
+    }
+    .responsive-display{
+        display: block;
+    }
+    .footer{
+        width: auto;
+    }
+    .responsive-footer-heading{
+        width: 50rem;
+    }
+    .footer li{
+        width: 50rem;
+    }
+    .banner{
+        display: block;
+        width: 100vw;
+        height: auto;
+        top:0;
+        margin-top: 0; 
+        
+    }
+    .navbar{
+        display: none;
+    }
+    .responsive-heading-font-banner{
+        font-size: 3rem;
+    }
+    #bannarTitle{
+      padding: 3rem;  
+    }
+    .sidenav  {
+        padding-top: 15px;
+    }
+    .sidenav a  {
+        font-size: 18px;
+    }
+    #carousel-item{
+        width: 100%;
+    }
+    .cust-ban2-head{
+        width: auto;
+        height: auto;
+        top: 10rem;
+        left: 2rem;
+    }
+    .margin-0{
+        margin: 0;
+    }
+    
+    .padding-0{
+        padding: 0;
+    }
+    .hotel-img{
+        height: 10rem;
+        width: 10rem;
+        border-radius: 0;
+
+    }
+   
+}
+
+@media  only screen and(min-width:769px) {
+    .responsive-display{
+        display: none;
+    }
+}

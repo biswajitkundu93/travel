@@ -1,0 +1,69 @@
+<div class="footer" style="margin-top:2px;">
+    <div class="container-fluid text-white">
+        <div class="row responsive-grid">
+            <div class="col-3 mt-5 pl-5 w-auto responsive-hide">
+                <p><b>Corporate Office</b></p>
+                <p>Ward No. 10, VPO. Dhanota,</p>
+                <p>Teh./Distt. Bharatpur</p>
+                <p>Rajasthan - 321303 </p>
+                <p style="color: chartreuse;">Email: info@takemytrip.net</p>
+                <p style="color: chartreuse;">M: +91-9414619658</p>
+                <p style="color: chartreuse;">M: +91-9024662270</p>
+                <div style="border: 2px solid orange; width: 50%;"></div>
+
+            </div>
+            <div class="responsive-display responsive-grid">
+                <p><b>Corporate Office</b></p>
+                <p>Ward No. 10, VPO. Dhanota,</p>
+                <p>Teh./Distt. Bharatpur<p> 
+                <p>Rajasthan - 321303 </p>
+                <p style="color: chartreuse;">Email: info@takemytrip.net</p>
+                <p style="color: chartreuse;">M: +91-9414619658</p>
+                <p style="color: chartreuse;">M: +91-9024662270</p>
+                <div style="border: 2px solid orange; width: 50%;"></div>
+            </div>
+            <div class="col-3 mt-5 ">
+                <h4 class="text-warning responsive-footer-heading" >Tours By Interest</h4>
+                <div style="border: 2px solid orange; width: 50%;"></div>
+                <ul class="ml-4">
+                    {% for i in footer.interestTitleList %}
+                    <li class="mt-2"><a href="/packages/{{i.id}}"
+                            class="text-decoration-none text-white">{{i.name|title}}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-3 mt-5">
+                <h4 class="text-warning responsive-footer-heading" >Tours By Region</h4>
+                <div style="border: 2px solid orange; width: 50%;"></div>
+                <ul class="ml-4">
+                    {% for i in footer.regionTitleList %}
+                    <li class="mt-2"><a href="/region/{{i.id}}"
+                            class="text-decoration-none text-white">{{i.name|title}}</a></li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+            <div class="col-3 mt-5">
+                <h4 class="text-warning responsive-footer-heading" >Useful Links</h4>
+                <div style="border: 2px solid orange; width: 50%;"></div>
+                <ul class="ml-4">
+                    <li class="mt-2"><a class="text-decoration-none text-white" href="/home">Home</a></li>
+                    <li class="mt-2"><a class="text-decoration-none text-white" href="/destination">Destination</a>
+                    </li>
+                    <li class="mt-2"><a class="text-decoration-none text-white" href="/service">Services</a></li>
+                    <li class="mt-2"><a class="text-decoration-none text-white" href="/hotel">Hotels</a></li>
+                    <li class="mt-2"><a class="text-decoration-none text-white" href="/contect">Contact Us</a></li>
+                    <li class="mt-2"><a class="text-decoration-none text-white" href="/enquiry">Quick Enquiry</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="w-100 text-light bg-dark">
+    <div class="container">
+        <div class="row justify-content-center p-3">
+            Copyright @ 2020 Travel | All Rights Reserved
+        </div>
+    </div>
+</div>

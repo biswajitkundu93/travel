@@ -1,0 +1,106 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<div id="carouselExampleSlidesOnly position-relative" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://www.impactbnd.com/hubfs/blog-image-uploads/best-about-us-pages.jpg" class="d-block w-100"
+                alt="..." style="height: 30rem;">
+        </div>
+    </div>
+
+    <div class="position-absolute cust-ban2-head responsive-hide">
+        {% include  './components/navlist.html' %}
+        <p class="text-warning mx-5 px-4" style="font-size: 3rem;">{{ "about us" | upper }}</p>
+    </div>
+    <div class="position-absolute cust-ban2-head responsive-display">
+        <p class="text-warning fadeIn" style="font-size: 3rem;">{{ "about us" | upper }}</p>
+    </div>
+    <div class="position-absolute" style="top:0;">
+        {% include "./components/responsive-sidebar.html" %}
+    </div>
+</div>
+
+<div class="container-fluid mt-3 p-5 responsive-hide" style="background-color: rgba(0, 0, 0, 0.8);">
+    <div class="row ">
+        <div class="col-6">
+            <!-- <p class="text-justify text-warning ">{{about}}</p> -->
+            <p class="text-justify text-warning ">Established in 2019, Take My Trip (TMT) India has already established itself as one of the leading tours and travel companies in India. TMT is dedicated to bringing to the customers and experience of customised holidays with planned trips and destinations to suit everyone's requirements. 
+
+                <br/><br/>Take My Trip is dedicated to provide an unmatchable experience to the clients with different booking options. At TMT, we aim at providing the best by catering to all your travel needs right from transport to accommodation and eventually your travel experience. Client satisfaction is our top priority. We believe in offering the best with great client service, quick installments, discount management and settlement of the payments. We have worked with clients who were pretty satisfied with all the travel opportunities offered. 
+                
+                <br/><br/>Take My Trip grew like a seed to becoming one of the best travel explorers of India. Being renowned in the Indian travel industry, TMT is now spreading its branches worldwide too. Quick decisions and fast responses have helped TMT reach where it is today. 
+                </p>
+            <p class="text-justify text-light"><strong>Why Take my Trip? </strong></p>
+            <ul class="text-warning ml-5">
+                <li>
+                    Trusted advisor
+                </li>
+                <li>
+                    Responsive
+                </li>
+                <li>
+                    Communicative
+                </li>
+                <li>
+                    Various customized tours and packages
+                </li>
+                <li>
+                    Collaborative
+                </li>
+            </ul>
+            <p class="text-warning text-justify">
+                TMT is your one-stop solution for a comfortable tour experience with memorable moments. We are just a call/click away to help you get the best experience of your lifetime. Take My Trip is advancing and evolving with time due to the vast presence of items and administrations. Building India's travel experience, TMT is now spreading its roots abroad promising an unmatched communicative experience. 
+
+                <br/><br/>Get in touch with TMT today for a world-class travel experience. 
+
+            </p>
+            
+
+        </div>
+        <div class="col-4 mx-2 my-5 ">
+            <div class="row ">
+                <img src="https://www.talescart.com/wp-content/uploads/2019/04/1-46.jpg" alt=""
+                    class="cust-img-shado-round mx-auto ">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid responsive-display" style="background-color: rgba(0, 0, 0, 0.8);">
+    <div class="row ">
+        <div class="col-xs-6 m-5 ">
+            <!-- <p class="text-justify text-warning ">{{about}}</p> -->
+            <p class="text-justify text-warning ">Established in 2019, Take My Trip (TMT) India has already established itself as one of the leading tours and travel companies in India. TMT is dedicated to bringing to the customers and experience of customised holidays with planned trips and destinations to suit everyone's requirements. 
+
+                <br/><br/>Take My Trip is dedicated to provide an unmatchable experience to the clients with different booking options. At TMT, we aim at providing the best by catering to all your travel needs right from transport to accommodation and eventually your travel experience. Client satisfaction is our top priority. We believe in offering the best with great client service, quick installments, discount management and settlement of the payments. We have worked with clients who were pretty satisfied with all the travel opportunities offered. 
+                
+                <br/><br/>Take My Trip grew like a seed to becoming one of the best travel explorers of India. Being renowned in the Indian travel industry, TMT is now spreading its branches worldwide too. Quick decisions and fast responses have helped TMT reach where it is today. 
+                </p>
+            <p class="text-justify text-light"><strong>Why Take my Trip? </strong></p>
+            <ul class="text-warning">
+                <li>
+                    Trusted advisor
+                </li>
+                <li>
+                    Responsive
+                </li>
+                <li>
+                    Communicative
+                </li>
+                <li>
+                    Various customized tours and packages
+                </li>
+                <li>
+                    Collaborative
+                </li>
+            </ul>
+            <p class="text-warning text-justify">
+                TMT is your one-stop solution for a comfortable tour experience with memorable moments. We are just a call/click away to help you get the best experience of your lifetime. Take My Trip is advancing and evolving with time due to the vast presence of items and administrations. Building India's travel experience, TMT is now spreading its roots abroad promising an unmatched communicative experience. 
+
+                <br/><br/>Get in touch with TMT today for a world-class travel experience. 
+
+            </p>
+            
+        </div>
+    </div>
+</div>
+{% endblock content %}

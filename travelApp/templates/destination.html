@@ -1,0 +1,55 @@
+{% extends "layout/base.html" %}
+{% block content %}
+<div id="carouselExampleSlidesOnly position-relative" class="carousel slide" data-ride="carousel">
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="https://www.rd.com/wp-content/uploads/2017/11/this-is-the-one-destination-people-want-to-visit-before-they-die-hint-its-not-in-europe_458190886_maria-savenko-1024x683.jpg"
+        class="d-block w-100" alt="..." style="height: 30rem;">
+    </div>
+  </div>
+
+  <div class="position-absolute cust-ban2-head responsive-hide">
+    {% include  './components/navlist.html' %}
+    <p class="text-warning mx-5 px-4" style="font-size: 3rem;">DESTINATION</p>
+  </div>
+  <div class="position-absolute cust-ban2-head responsive-display">
+    <p class="text-warning fadeIn" style="font-size: 3rem;">DESTINATION</p>
+  </div>
+  <div class="position-absolute" style="top:0;">
+    {% include "./components/responsive-sidebar.html" %}
+  </div>
+</div>
+
+
+<div class="container dest-bg my-5" style="background:#343A40;">
+  {% for item in data %}
+  <div class="row px-5">
+    <h1 class="mt-5 text-info w-100">
+      <marquee behavior="scroll" direction="right" scrollamount="5"><b>About {{item.name | upper}}</b></marquee>
+    </h1>
+    <p class="text-white">{{item.description}}</p>
+    <h3 class=" text-danger ">
+      <marquee behavior="scroll" direction="left" scrollamount="1"><b>Cities List</b></marquee>
+    </h3>
+    <div class="container">
+      <div class="row responsive-hide">
+        {% for city in item.city %}
+        <div class="col-2 my-2">
+          <a class="btn btn-outline-success" href="/destination/city/{{city.id}}">{{ city.cityName | upper }}</a>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="responsive-display row">
+        {% for city in item.city %}
+        <div class="col-2 my-2">
+          <a class="btn btn-link" href="/destination/city/{{city.id}}">{{ city.cityName | upper }}</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock  %}

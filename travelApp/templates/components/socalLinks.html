@@ -1,0 +1,177 @@
+<style>
+    #mo-links{
+        list-style:none;
+    }
+    #mo-links li{
+        width:3rem;
+        height:3rem;
+    }
+    #mo-links li a{
+        font-size:1.5rem;
+        color:white;
+    }
+    #mo-links li:nth-child(1){
+        background-color:#38529a;
+    }
+    #mo-links li:nth-child(2){
+        background-color:#dd2a7b;
+    }
+    #mo-links li:nth-child(3){
+        background-color:#d01338;
+    }
+    #mo-links li:nth-child(4){
+        background-color:#4ea6e9;
+    }
+    #mo-links li:nth-child(5){
+        background-color:#c4302b;
+    }
+    #mo-links li:nth-child(6){
+        background-color:#0081ac;
+    }
+    
+    
+
+    
+    .cube-wrapper{
+        width:5rem;
+        height:5rem;
+        position:relative;
+        perspective: 4000px;
+    }
+    
+    .cube, .cube div{
+        width:100%;
+        top:0;
+        left:0;
+        position:absolute;
+        transform-style: preserve-3d;
+        transition: all 0.5s linear;
+        display:block;
+    }
+    .cube-top{
+        background-color: black;
+        color:white;
+        width:100%;
+        height:5rem;
+        transform: translate(0,100%) rotateX(-90deg);
+        transform-origin:top;
+        z-index: -1;
+        cursor:pointer;
+    }
+    .cube-top a{
+        color:#fff;
+    }
+    .cube a{
+        font-size: 1.2rem;
+        text-decoration:none;
+    }
+    .cube-front a{
+        color: #fff;
+    }
+    .cube-front{
+        cursor:pointer;
+        width:100%;
+        height:5rem;
+        background-color:yellow;
+    }
+    .cube-wrapper:hover .cube{
+        transform: translate(0, 50%) rotateX(90deg);
+    }
+    
+    
+</style>
+<div class="container-fluid mt-4 responsive-hide">
+    <div class="row" id="so-link">
+        
+        
+        <div class="col-md-2 cube-wrapper">
+            <div class="cube">
+                <div class="cube-top py-4 px-3">
+                    <a class="m-4" href="https://www.facebook.com/"> <i class="fa fa-facebook"></i>  Facebook</a>
+                </div>
+                <div class="cube-front py-4 px-3" style="background-color:#38529a;">
+                    <a class="m-4" href="https://www.facebook.com/"> <i class="fa fa-facebook"></i>  Facebook</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="col-md-2 cube-wrapper" >
+            <div class="cube">
+                <div class="cube-top py-4 px-3">
+                    <a class="m-4" href="https://www.instagram.com/"><i class="fa fa-instagram"></i>  Instagram</a>        
+                </div>
+                <div class="cube-front py-4 px-3" style="background-color:#dd2a7b;">
+                    <a class="m-4" href="https://www.instagram.com/"><i class="fa fa-instagram"></i>  Instagram</a>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        <div class="cube-wrapper col-md-2" >
+            <div class="cube">
+                <div class="cube-top py-4 px-3">
+                    <a class="m-4" href="https://in.pinterest.com/"><i class="fa fa-pinterest-p"></i> Pinterest</a>
+                </div>
+                <div class="cube-front py-4 px-3" style="background-color:#d01338;">
+                    <a class="m-4" href="https://in.pinterest.com/"><i class="fa fa-pinterest-p"></i> Pinterest</a>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        <div class="cube-wrapper col-md-2" >
+            <div class="cube">
+                <div class="cube-top py-4 px-3">
+                    <a class="m-4" href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i> Twitter</a>
+                </div>
+                <div class="cube-front py-4 px-3" style="background-color:#4ea6e9;">
+                    <a class="m-4" href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i> Twitter</a>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        <div class="cube-wrapper col-md-2">
+            <div class="cube">
+                <div class="cube-top py-4 px-3">
+                    <a class="m-4" href="https://www.youtube.com/"><i class="fa fa-youtube"></i> Youtube</a>
+                </div>
+                <div class="cube-front py-4 px-3" style="background-color:#c4302b;">
+                    <a class="m-4" href="https://www.youtube.com/"><i class="fa fa-youtube"></i> Youtube</a>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        <div class="cube-wrapper col-md-2">
+            <div class="cube">
+                <div class="cube-top py-4 px-3">
+                    <a class="m-4" href="https://in.linkedin.com/"><i class="fa fa-linkedin"></i>  Linked In</a>
+                </div>
+                <div class="cube-front py-4 px-3" style="background-color:#0081ac;">
+                    <a class="m-4" href="https://in.linkedin.com/"><i class="fa fa-linkedin"></i>  Linked In</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid mt-4 responsive-display">
+    <div class="row mt-3">
+        <ul class="d-flex" id="mo-links">
+            <li class="mx-2 rounded-circle"><a href="https://www.facebook.com/"><i class="fa fa-facebook ml-3 my-3"></i></a></li>
+            <li class="mx-2 rounded-circle"><a href="https://www.instagram.com/"><i class="fa fa-instagram " style="margin-left:13px;margin-top:11px;"></i></a></li>
+            <li class="mx-2 rounded-circle"><a href="https://in.pinterest.com/"><i class="fa fa-pinterest-p ml-3 my-3"></i></a></li>
+            <li class="mx-2 rounded-circle"><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter ml-3 my-3"></i></a></li>
+            <li class="mx-2 rounded-circle"><a href="https://www.youtube.com/"><i class="fa fa-youtube ml-3 my-2"></i></a></li>
+            <li class="mx-2 rounded-circle"><a href="https://in.linkedin.com/"><i class="fa fa-linkedin ml-3 my-2"></i></a></li>
+        </ul>
+    </div>
+</div>

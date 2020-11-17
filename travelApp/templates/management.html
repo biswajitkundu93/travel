@@ -1,0 +1,52 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<div id="carouselExampleSlidesOnly position-relative" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://blog.hubspot.com/hubfs/Management-Skills.jpg" class="d-block w-100" alt="..."
+                style="height: 30rem;">
+        </div>
+    </div>
+    <div class="position-absolute cust-ban2-head responsive-hide">
+        {% include  './components/navlist.html' %}
+        <p class="text-warning mx-5 px-4" style="font-size: 3rem;">{{ "managements" | upper }}</p>
+    </div>
+    <div class="position-absolute cust-ban2-head responsive-display" style=" left: 5px;">
+        <p class="text-warning fadeIn" style="font-size: 3rem;">{{ "managements" | upper }}</p>
+    </div>
+    <div class="position-absolute" style="top:0;">
+        {% include "./components/responsive-sidebar.html" %}
+    </div>
+</div>
+
+<div class="container-fluid mt-3 p-5 responsive-hide" style="background-color: rgba(0, 0, 0, 0.8);">
+    <div class="row">
+        <div class="col-4 m-2 my-5 ">
+            <div class="row ">
+                <img src={{management.image.url}} class="cust-img-shado-round mx-auto">
+            </div>
+        </div>
+        <div class="col-7">
+            <h1 class="text-white">Mr. {{management.name | upper}}</h1>
+            <h3 class="text-white">Managing director</h3>
+            <p class="text-justify text-warning mt-5">{{management.description}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid responsive-display" style="background-color: rgba(0, 0, 0, 0.8);">
+    <div class="row">
+        <div class="col-md-4  ">
+            <div class="row ">
+                <img src="https://pbs.twimg.com/media/DZotU1hW0AEDN5F.jpg:large"
+                    class="cust-img-shado-round mx-auto mt-3" style="width: 10rem; height: 10rem;">
+            </div>
+        </div>
+        <div class="col-md-7 ">
+            <h1 class="text-white mt-5" style="font-size: 2rem;">Mr. {{management.name | upper}}</h1>
+            <h3 class="text-white" style="font-size: 1.5rem;">Managing director</h3>
+            <p class="text-justify text-warning mt-5 m4-3" style="width: 10rm">{{management.description}}</p>
+        </div>
+    </div>
+</div>
+{% endblock content %}

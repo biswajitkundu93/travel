@@ -1,0 +1,42 @@
+{% extends "layout/base.html" %}
+{% block content %}
+
+<div id="carouselExampleSlidesOnly position-relative" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="https://images.fineartamerica.com/images-medium-large-5/7-background-travel-concept-potowizard-thailand.jpg"
+                class="d-block w-100" alt="..." style="height: 30rem;">
+        </div>
+
+    </div>
+    <div class="position-absolute cust-ban2-head responsive-hide">
+        {% include  './components/navlist.html' %}
+        <p class="text-warning mx-5 px-4" style="font-size: 3rem;">{{ "Gallery" |upper}}</p>
+    </div>
+    <div class="position-absolute cust-ban2-head responsive-display">
+        <p class="text-warning fadeIn" style="font-size: 3rem;">{{ "gallery" | upper }}</p>
+    </div>
+    <div class="position-absolute" style="top:0;">
+        {% include "./components/responsive-sidebar.html" %}
+    </div>
+</div>
+
+<div class="container bg-dark text-light mt-5">
+    <div class="row p-3">
+        {% for item in gallary %}
+        <div class="cal">
+            <div class="card m-2 zoomIn" style="width: 15rem;">
+                <img src={{item.image.url}} style="width: 12rem; height: 10rem;" class="card-img-top m-4 mx-auto"
+                    alt="...">
+                <div class="card-body">
+                    <p class="card-text text-info"><b>{{item.title}}</b></p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock content %}

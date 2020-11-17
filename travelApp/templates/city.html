@@ -1,0 +1,92 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<div id="carouselExampleSlidesOnly position-relative" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src={{image.url}} class="d-block w-100" alt="..." style="height: 30rem;">
+    </div>
+  </div>
+  <div class="position-absolute cust-ban2-head responsive-hide">
+    {% include  './components/navlist.html' %}
+    <p class="text-warning mx-5 px-4" style="font-size: 3rem;">{{ name | upper }}</p>
+  </div>
+  <div class="position-absolute cust-ban2-head responsive-display">
+    <p class="text-warning fadeIn" style="font-size: 3rem;">{{ name | upper }}</p>
+  </div>
+  <div class="position-absolute" style="top:0;">
+    {% include "./components/responsive-sidebar.html" %}
+  </div>
+</div>
+
+
+<div class="container mt-3 bg-dark">
+  <div class="row py-2 position-relative ">
+
+    <div class="col-md-3 mt-5 mx-2 border border-light h-50 shadow-lg rounded bg-light responsive-hide">
+      <h4 class="text-dark ml-2 mt-3">LIST OF CITY in {{ country | upper}}</h4>
+      <div class="w-100 border border-warning"></div>
+      <ul class="mt-2 ml-3">
+        {% for i in cities %}
+        <li class="my-2 text-danger"><a class="text-dark font-weight-bolder" href="/destination/city/{{i.id}}"
+            style="text-decoration: none;">{{i.cityName | upper }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div id="mySidenav2" class="sidenav"
+      style="top:10rem; left: 1rem; border-radius: 2rem;   background-color: white; height: 20rem;">
+      <a href="javascript:void(0)" class="closebtn text-dark" onclick="closeNav2()">&times;</a>
+      <ul class="ml-5">
+        {% for i in cities %}
+        <li class="my-3" style="font-size: 1.2rem;"><a href="/destination/city/{{i.id}}"
+            style="color: black; font-size:larger;">{{i.cityName | upper }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <span class="postision-absolute responsive-margin text-white responsive-display"
+      style="font-size:2rem;cursor:pointer" onclick="openNav2()">&hellip;</span>
+
+
+
+
+    <div class="col-md-8 mt-4">
+      <h1 class="text-warning my-3 fadeIn" id="cityName">About {{name|upper }}</h1>
+      <p class="text-light my-2 text-justify">{{about}}</p>
+
+      {% if attraction|length > 0 %}
+
+      <h1 class="text-info"></b>Tours Attraction</b></h1>
+
+      {% for item in attraction %}
+
+      <div class="row my-4 d-flex flex-column ml-3 responsive-grid">
+        <h3 class="text-warning">{{ item.name_place | upper }}</h3>
+        <div class="row mt-3 responsive-grid">
+          {% if item.image  %}
+          <div class="col-6">
+            <p class="text-light">{{ item.description }}</p>
+          </div>
+          <div class="col-6 ">
+            <img src={{ item.image.url }} alt="" style="width:20rem;height:15rem;" class="responsive-hide">
+            <img src={{ item.image.url }} alt="" class="responsive-display" style="width:8rem;height:8rem;">
+          </div>
+          {% else %}
+          <div class="col-12">
+            <p class="text-light responsive-hide">{{ item.description }}</p>
+            <p class="text-light responsive-display" style="width: 18rem;">{{ item.description }}</p>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+      {% endif %}
+      <a class="btn btn-outline-danger" href="/destination">Back to Destination</a>
+    </div>
+  </div>
+
+</div>
+
+
+
+{% endblock content %}
